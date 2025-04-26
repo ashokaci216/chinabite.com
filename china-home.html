@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>China Bite - Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <div class="header">
+    <button onclick="goBack()" class="back-btn-text">←Back to Page</button>
+  </div>
+
+  <div class="hero-banner">
+    <a href="china-menu.html">
+       <img src="images/china-bite-hero-banner1.jpg" alt="Hero Banner">
+    </a>
+ </div>
+ 
+  <!-- Image Grid -->
+  <div class="image-grid">
+    <img src="images/offer1.jpg" alt="Offer 1" />
+    <img src="images/offer2.jpg" alt="Offer 2" />
+    <img src="images/offer3.jpg" alt="Offer 3" />
+    <img src="images/offer4.jpg" alt="Offer 4" />
+    <img src="images/offer5.jpg" alt="Offer 5" />
+    <img src="images/offer6.jpg" alt="Offer 6" />
+    <img src="images/offer7.jpg" alt="Offer 7" />
+    <img src="images/offer8.jpg" alt="Offer 8" />
+  </div>
+
+  <!-- Sticky Footer -->
+  <div class="sticky-footer">
+    <button class="order-now" onclick="goToMenu()">Order Now</button>
+    <div class="cart-icon" onclick="openCart()">
+      🛒<span id="cart-count">0</span>
+    </div>
+  </div>
+
+  <!-- Footer Info -->
+  <footer class="text-center text-sm text-gray-500 py-4">
+    📍 China Bite, Shop No. 34, Ground Floor, JK Chambers Building, Sector 17, Vashi, Navi Mumbai, Maharashtra 400703<br>
+    📲 Contact No: 8097001355
+  </footer>
+
+  <script>
+    function goBack() {
+      window.location.href = 'index.html';
+    }
+    function goToMenu() {
+      window.location.href = 'china-menu.html';
+    }
+    function openCart() {
+      document.getElementById("cart-panel")?.classList.remove("hidden");
+      document.getElementById("cart-panel")?.classList.add("show");
+    }
+  </script>
+</body>
+</html>

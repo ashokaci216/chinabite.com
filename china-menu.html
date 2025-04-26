@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>China Bite - Order Menu</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Top Header -->
+  <div class="header">
+    <button onclick="goBack()" class="back-btn-text">←Back to Page</button>
+  </div>
+
+  <!-- Search Bar -->
+  <div class="search-bar">
+    <input id="menu-search-bar" type="text" placeholder="Search dish or category" oninput="filterMenu()" />
+  </div>
+
+  <!-- Menu Categories and Items -->
+  <div id="menu-section"></div>
+
+  <!-- Floating MENU Button -->
+  <button id="menu-toggle" class="floating-menu-btn" onclick="openCategorySelector()">MENU</button>
+
+  <!-- View Cart Row -->
+  <div id="view-cart-row" class="view-cart-row hidden">
+    <span id="cart-info">0 items added</span>
+    <button onclick="openCart()">View Cart</button>
+  </div>
+
+  <!-- Slide-in Cart Panel -->
+  <div id="cart-panel" class="cart-panel hidden">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button onclick="closeCart()">❌</button>
+    </div>
+    <div id="cart-items" class="cart-body"></div>
+    <div class="cart-footer">
+      <p>Total: ₹<span id="cart-total">0</span></p>
+      <input type="text" id="cust-name" placeholder="Your Name" />
+      <input type="text" id="cust-address" placeholder="Your Address" />
+      <button onclick="orderWhatsApp()">Order via WhatsApp</button>
+    </div>
+  </div>
+
+  <!-- Image Preview Modal -->
+  <div id="preview-modal" class="preview-modal hidden">
+    <div class="modal-content">
+      <button onclick="closePreview()" class="close-btn">❌</button>
+      <img id="preview-img" src="" alt="Item" />
+      <h3 id="preview-name"></h3>
+      <p id="preview-desc"></p>
+      <p id="preview-price"></p>
+      <div class="qty-controls">
+        <button onclick="changeQty('decrease')">➖</button>
+        <span id="preview-qty">0</span>
+        <button onclick="changeQty('increase')">➕</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
